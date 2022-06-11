@@ -1,0 +1,22 @@
+id,order_id,product_id,quantity,total_price,product_data.merchandise_value,order_data.customer_id,customer_data.name
+1,1,1,1.00,100.01,90.01,1,Harry Styles
+2,2,2,1.00,31.41,25.31,2,Britney Spears
+3,2,3,1.00,9.99,8.5,2,Britney Spears
+4,3,3,3.00,29.97,25.5,3,Justin Timberlake
+6,4,3,1.00,9.99,8.5,1,Harry Styles
+7,5,1,1.00,100.01,90.01,4,Ariana Grande
+8,6,1,1.00,100.01,90.01,5,Lady Gaga
+9,7,1,1.00,100.01,90.01,6,Jennifer Lopez
+10,7,3,2.00,19.98,17,6,Jennifer Lopez
+5,4,2,3.00,94.23,75.93,1,Harry Styles
+11,8,3,5.00,49.95,42.5,4,Ariana Grande
+12,9,2,3.00,94.23,75.93,7,Taylor Swift
+13,10,1,1.00,100.01,90.01,8,Prince
+14,11,5,2.00,60.2,50.4,9,Michael Jackson
+15,11,7,1.00,85.59,78.12,9,Michael Jackson
+16,11,9,1.00,15.28,13.21,9,Michael Jackson
+17,12,6,3.00,41.85,31.23,10,Katy Perry
+18,12,4,1.00,83.13,80.01,10,Katy Perry
+19,13,2,1.00,31.41,25.31,5,Lady Gaga
+20,14,8,1.00,92.75,90.14,1,Harry Styles
+21,14,6,3.00,41.85,31.23,1,Harry Styles
