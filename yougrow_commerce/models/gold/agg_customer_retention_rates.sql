@@ -18,16 +18,16 @@ retention_rate as (
            b.cnt_new_subscriber,
            a.cnt_customer_purchases,
            a.cnt_customer_purchases - b.cnt_new_subscriber as retained_customer_cnt,
-           sum(b.cnt_new_subscriber) over (order by b.order_month_year) as running_total_new_subscriber,
-           (a.cnt_customer_purchases - b.cnt_new_subscriber) / sum(b.cnt_new_subscriber) over (order by b.order_month_year) * 100 as monthly_retention_rate
+           sum(b.cnt_new_subscriber) over (order by b.order_month_year) as running_total_new_subscriber
     from monthly_distinct_customer_purchases a inner join monthly_new_subscribers b using (order_month_year)
 ),
 
 final as (
-    select order_month_year,
-           monthly_retention_rate,
-           100 - monthly_retention_rate as monthly_churn_rate
-    from retention_rate
+    select a.*,
+           case when a.cnt_new_subscriber = a.cnt_customer_purchases then 100
+                else (retained_customer_cnt / LAG(running_total_new_subscriber, 1) over (order by a.order_month_year)) * 100 end as monthly_retention_rate
+    from retention_rate a
+    order by order_month_year
 )
 
 select * from final
