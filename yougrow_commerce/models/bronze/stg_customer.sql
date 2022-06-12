@@ -3,7 +3,7 @@
 with stg_customer as (
     select id as customer_id,
            name as customer_name,
-           gender as gender,
+           gender as customer_gender,
            email as customer_email,
            state as customer_state,
            country as customer_country,
