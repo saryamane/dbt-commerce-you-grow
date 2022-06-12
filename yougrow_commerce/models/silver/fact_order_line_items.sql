@@ -1,6 +1,8 @@
 with final as (
     select oli.order_line_item_id,
            oli.order_id,
+           o.order_create_ts,
+           to_char(o.order_create_ts, 'YYYYMM') as order_month_year,
            o.currency,
            o.order_status,
            o.total_price as order_total_price,

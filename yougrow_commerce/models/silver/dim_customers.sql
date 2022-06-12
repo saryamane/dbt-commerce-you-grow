@@ -26,7 +26,9 @@ final as (
            customers.customer_location,
            customers.customer_gender,
            customer_orders.first_order_date,
+           to_char(customer_orders.first_order_date, 'YYYYMM') as first_order_month_year,
            customer_orders.most_recent_order_date,
+           to_char(customer_orders.most_recent_order_date, 'YYYYMM') as most_recent_order_month_year,
            coalesce(customer_orders.total_orders_placed,0) as number_of_orders,
            coalesce(customer_orders.total_purchase_amount,0) as total_revenue,
            coalesce(customer_orders.average_order_amount,0) as avg_order_amount
