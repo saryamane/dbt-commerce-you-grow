@@ -6,6 +6,9 @@ Target database is in PostgresSQL hosted on Heroku.
 
 The final metrics table is: select * from dvgmb960fs5u6.yougrow_commerce.agg_monthly_final_viz;
 
+![Screen Shot 2022-06-12 at 10 01 51 AM](https://user-images.githubusercontent.com/6847378/173244497-45caa2d5-5a52-4eb3-b7e4-c7ba801c3416.png)
+
+
 ## Installation and setup:
 
 This is pre-packaged with the seed csv files, you should be able to clone it, point the PostgresSQL DB of your choice in your profiles.yml file
